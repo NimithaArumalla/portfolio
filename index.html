@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>FullStack Developer</p>
+                <h1>Hello !!!<br><span>Nimitha Arumalla</span> here</h1>
+            </div>
+        </div>
+    </div>
+    <!--------------------about-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/trees.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Iam Nimitha Arumalla.
+                        I'm pursuing my final year of bachelor degree 
+                        in Computer Science and Engineering 
+                        from NRI institute of technology.
+                        Upto Seventh semester I have secured 8.7 CGPA out of 10.
+                        Along with my Academics I also developed Strong coding and Communication skills.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>FullStack Developer</span><br>Design and create Websites</li>
+                            
+                            <li><span>Web Developer</span><br>Design Web Applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>current</span><br>Btech at Nri institute of technology</li>
+                            <li><span>2021</span><br>Intermediate from Sri Chaitanya Jr college</li> 
+                            <li><span>2019</span><br>10th Grade from Lahari VidyaMandir</li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------contact------------- -->    
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> nimithaarumalla@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> 9398668286</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required><br>
+                    <input type="email" name="email" placeholder="Your Email" required><br>
+                    <textarea name="message" rows="6" placeholder="message"></textarea>
+                    <button type="submit" class="btn btn2">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Nimitha</p>
+    </div>
+</div>
+    <script>
+        var tablinks=document.getElementsByClassName('tablinks');
+        var tabcontents=document.getElementsByClassName('tab-contents');
+        function opentab(tabname){
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+</body>
+</html>
